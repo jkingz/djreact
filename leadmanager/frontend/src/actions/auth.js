@@ -26,7 +26,7 @@ export const loadUser = () => (dispatch, getState) => {
 
   // IF TOKEN ADD TO HEADER CONFIG
   if (token) {
-    config.header["Authorization"] = `Token ${token}`;
+    config.headers["Authorization"] = `Token ${token}`;
   }
 
   axios
