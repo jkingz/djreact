@@ -10,7 +10,7 @@ import {
 } from "./types";
 
 // CHECK TOKEN AND LOAD USER
-export const loadUser = () => dispatch => {
+export const loadUser = () => (dispatch, getState) => {
   //USER LOADING
   dispatch({ type: USER_LOADING });
 
@@ -46,7 +46,7 @@ export const loadUser = () => dispatch => {
 };
 
 // LOGIN USER
-export const login = (username, password) => (dispatch, getState) => {
+export const login = (username, password) => dispatch => {
   // Headers
   const config = {
     headers: {
